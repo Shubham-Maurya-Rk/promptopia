@@ -14,7 +14,7 @@ const PromptCard = ({ post, editable, handleDelete, setsearchText }) => {
     <div className='rounded-lg shadow-2xl p-4 bg-slate-100'>
       <div className='w-full flex items-center justify-between mb-2'>
         <div className='flex items-center'>
-          <Image src={post.creator.image} alt={post.prompt} width={35} height={35} className='' />
+          <Image src={post.creator.image} alt={post.prompt} width={35} height={35} className='rounded-full' />
           <div className='ml-3'>
             <Link href={`/profile/${post.creator._id}`} className='font-bold text-lg'>{post.creator.username}</Link>
             <p className='text-xs text-gray-500'>{post.creator.email}</p>

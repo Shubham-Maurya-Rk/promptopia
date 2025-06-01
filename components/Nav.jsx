@@ -38,13 +38,16 @@ const Nav = () => {
                             <button className='rounded-full font-semibold  px-4 py-2 border border-black hover:bg-black hover:text-white' onClick={signOut}>
                                 Sign Out
                             </button>
-                            <Image
-                                src={session?.user.image}
-                                alt='logo'
-                                width={35}
-                                height={35}
-                                className='object-contain'
-                            />
+                            <Link href={`/profile/${session?.user.id}`}>
+                                <Image
+                                    src={session?.user.image}
+                                    alt='logo'
+                                    width={35}
+                                    height={35}
+                                    className='object-contain'
+                                    className='rounded-full'
+                                />
+                            </Link>
                         </div> :
                         // <button className='rounded-full font-semibold  px-4 py-2 border border-black'>
                         //     Sign In
